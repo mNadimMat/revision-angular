@@ -1,0 +1,18 @@
+<fieldset>
+  <legend>Personne details</legend>
+
+  <fieldset *ngIf="currentAddress != undefined">
+    <legend>Current</legend>
+    {{currentAddress.street}}
+    {{currentAddress.city}}
+  </fieldset>
+
+  Nom:{{personne.nom}}
+  Prenom : {{personne.prenom}}
+  Age : {{personne.age}}
+
+  Adresses :
+
+  <app-adresse *ngFor="let ad of personne.adresses" [adresse]="ad" ></app-adresse>
+
+</fieldset>
